@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import FriendCard from "./components/FriendCard";
+import Card from "./components/Cards";
 import Wrapper from "./components/Wrapper";
-import Title from "./components/Title";
+import Jumbotron from "./components/Jumbotron";
 import friends from "./friends.json";
 
 class App extends Component {
@@ -20,20 +20,22 @@ class App extends Component {
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
     return (
-      <Wrapper>
-        <Title>Friends List</Title>
-        {this.state.friends.map(friend => (
-          <FriendCard
-            removeFriend={this.removeFriend}
-            id={friend.id}
-            key={friend.id}
-            name={friend.name}
-            image={friend.image}
-            occupation={friend.occupation}
-            location={friend.location}
-          />
-        ))}
-      </Wrapper>
+      <div>
+        <Jumbotron></Jumbotron>
+        <Wrapper>
+          {this.state.friends.map(friend => (
+            <Card
+              removeFriend={this.removeFriend}
+              id={friend.id}
+              key={friend.id}
+              name={friend.name}
+              image={friend.image}
+              occupation={friend.occupation}
+              quote={friend.quote}
+            />
+          ))}
+        </Wrapper>
+      </div>
     );
   }
 }
