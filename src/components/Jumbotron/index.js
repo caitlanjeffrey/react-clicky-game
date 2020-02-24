@@ -6,8 +6,8 @@ function Jumbotron(props) {
     <div>
       <div className="jumbotron jumbotron-fluid">
         <div className="container">
-          <h1 className="display-4">Fluid jumbotron</h1>
-          <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+          <h1 className="display-4">React Clicky Game</h1>
+          <p className="lead">Select a character to begin...</p>
         </div>
       </div>
     </div>

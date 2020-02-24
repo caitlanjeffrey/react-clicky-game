@@ -1,3 +1,4 @@
+
 import React, { Component } from "react";
 import Card from "./components/Cards";
 import Wrapper from "./components/Wrapper";
@@ -17,7 +18,7 @@ class App extends Component {
     clickMessage,
   };
 
-  addAClick = id => {
+  click = id => {
     const friends = this.state.friends
     const clickedMatch = friends.filter(friends => friends.id === id)
 
@@ -79,10 +80,15 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Jumbotron></Jumbotron>
+        <Jumbotron>
+          <p className="message">{clickMessage}</p>
+          <p className="currentScore">Current Score: {correctGuesses}</p>
+          <p className="bestScore">High Score: {bestScore}</p>
+        </Jumbotron>
         <Wrapper>
           {this.state.friends.map(friend => (
             <Card
+              click={this.click}
               id={friend.id}
               key={friend.id}
               name={friend.name}
