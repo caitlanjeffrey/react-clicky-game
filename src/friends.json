@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "SpongeBob",
-    "image": "/public/img/Leslie_Knope.jpg",
+    "image": "https://vignette.wikia.nocookie.net/spongebobgalaxy/images/0/07/SpongeBob_SquarePants.png/revision/latest?cb=20171228024014",
     "occupation": "Fry Cook",
     "quote": "A Pineapple Under the Sea"
   },

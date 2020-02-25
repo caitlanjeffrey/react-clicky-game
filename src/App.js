@@ -80,11 +80,12 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Jumbotron>
-          <p className="message">{clickMessage}</p>
-          <p className="currentScore">Current Score: {correctGuesses}</p>
-          <p className="bestScore">High Score: {bestScore}</p>
-        </Jumbotron>
+        <Jumbotron
+          clickMessage={clickMessage}
+          correctGuesses={correctGuesses}
+          bestScore={bestScore}
+        />
+
         <Wrapper>
           {this.state.friends.map(friend => (
             <Card
@@ -98,7 +99,7 @@ class App extends Component {
             />
           ))}
         </Wrapper>
-      </div>
+      </div >
     );
   }
 }
